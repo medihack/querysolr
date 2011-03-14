@@ -9,11 +9,11 @@ A Solr request can be configured by using option parameters:
     $.querysolr({
       host: "127.0.0.1", // the IP or domain where the Solr server runs (default '127.0.0.1')
       port: "8983", // the port the Solr server listens (default '8983')
-      component: "select" // the query component to use (default 'select')
+      component: "select", // the query component to use (default 'select')
       params: { // the Solr query params to use (default 'q: *:*"')
         q: "*:*",
         fq: "type:car"
-      }
+      },
       callback: function(data) { // a callback called after Solr results are received
         // do something with the returned Solr results (in JSON format)
       },
