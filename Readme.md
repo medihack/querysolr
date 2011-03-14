@@ -1,10 +1,10 @@
 # QuerySolr
 
-QuerySolr is small jQuery library to easily send Ajax **Solr** requests.
+QuerySolr is a small jQuery library for easily sending Ajax **Solr** requests.
 
 ## Sending Solr requests
 
-The Solr request can be configured by using option parameters:
+A Solr request can be configured by using option parameters:
 
     $.querysolr({
       host: "127.0.0.1", // the IP or domain where the Solr server runs (default '127.0.0.1')
@@ -18,10 +18,12 @@ The Solr request can be configured by using option parameters:
         // do something with the returned Solr results (in JSON format)
       },
       encodeURI: true // automatically encode the URI (default 'true')
-    }).query(); // send request.
+
+    }).query(); // and finally send the request.
 
 The above code would send the following request to Solr:
 `http://127.0.0.1:8983/solr/select/?q=*%3A*&fq=type:car&wt=json&json.wrf=?`
+and then calls the callback with the query result.
 
 ## Solr helper functions
 
