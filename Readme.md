@@ -1,10 +1,10 @@
 # QuerySolr
 
-QuerySolr is small jQuery library to make Ajax **Solr** requests more easy.
+QuerySolr is small jQuery library to easily send Ajax **Solr** requests.
 
 ## Sending Solr requests
 
-The Solr request can be easily configured by using options parameters:
+The Solr request can be configured by using option parameters:
 
     $.querysolr({
       host: "127.0.0.1", // the IP or domain where the Solr server runs (default '127.0.0.1')
@@ -27,13 +27,13 @@ The above code would send the following request to Solr:
 
 Additionally there are two helper functions:
 
-* `createDismax` to create a dismax expression for nested queries:
+* `createDismax` to create a dismax expression that can be used in nested queries:
 
    $.querysolr.createDismax("john", "name") // results in _query_:"{!dismax qf='name'}john"
 
 The first parameter is the query string itself, the second (optional) parameter is one or more (space separated) fields.
 
-* `escapeLucene` to escape special characters in a lucene query string:
+* `escapeLucene` to escape special characters of a lucene query string:
 
     $.querysolr.escapeLucene("string+to-escape") // results in "string\\+to\\-escape"
 
