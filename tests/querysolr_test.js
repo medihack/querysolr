@@ -17,7 +17,7 @@ test("query without additional options", function() {
 
   $.querysolr({
     callback: function(url, data) {
-      equal(url, "127.0.0.1:8982/solr/select/?q=*%3A*&wt=json&json.wrf=?");
+      equal(url, "127.0.0.1:8983/solr/select/?q=*%3A*&wt=json&json.wrf=?");
       equal(data.toSource(), "({})");
     }
   }).query();
